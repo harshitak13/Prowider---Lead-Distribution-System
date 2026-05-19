@@ -1,7 +1,6 @@
 import mongoose, { Schema, Document, Model } from 'mongoose'
 
 export interface IWebhookEvent extends Document {
-  _id: string           // idempotency key IS the _id
   action: string
   processedAt: Date
 }
