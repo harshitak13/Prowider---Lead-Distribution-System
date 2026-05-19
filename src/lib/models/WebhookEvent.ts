@@ -1,7 +1,6 @@
 import mongoose, { Schema, Document, Model } from 'mongoose'
 
 export interface IWebhookEvent extends Document {
-  _id: mongoose.Types.ObjectId | string
   action: string
   processedAt: Date
 }
