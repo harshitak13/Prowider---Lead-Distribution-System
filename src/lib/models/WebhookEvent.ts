@@ -6,7 +6,6 @@ export interface IWebhookEvent extends Document {
 }
 
 const WebhookEventSchema = new Schema<IWebhookEvent>({
-  _id:         { type: String, required: true },
   action:      { type: String, required: true },
   processedAt: { type: Date, default: Date.now },
 })
