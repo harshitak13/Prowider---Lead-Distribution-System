@@ -60,7 +60,7 @@ export async function assignProviders(
     const cursorVersion = cursor.__v as number
 
     // Load all providers in one query
-    const allProviderNums = [...new Set([...mandatory, ...pool])]
+    const allProviderNums = Array.from(new Set([...mandatory, ...pool]))
     const providers = await Provider.find({ providerNumber: { $in: allProviderNums } })
     const providerMap = new Map(providers.map(p => [p.providerNumber, p]))
 
