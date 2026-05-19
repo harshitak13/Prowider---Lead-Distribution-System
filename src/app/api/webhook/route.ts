@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+
+export const dynamic = 'force-dynamic'
 import { connectDB } from '@/lib/db'
 import { WebhookEvent } from '@/lib/models/WebhookEvent'
 import { Provider } from '@/lib/models/Provider'

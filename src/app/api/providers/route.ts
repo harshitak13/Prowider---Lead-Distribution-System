@@ -3,6 +3,8 @@ import { connectDB } from '@/lib/db'
 import { Provider } from '@/lib/models/Provider'
 import { LeadAssignment } from '@/lib/models/LeadAssignment'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
   await connectDB()
 
